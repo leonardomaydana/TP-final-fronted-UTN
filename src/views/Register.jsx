@@ -56,15 +56,18 @@ const  [nombre, setNombre] = useState("")
           onChange={handleChangeNombre}
         /> {nombre.length < 3 && <p className="error-form">Minimo 3 caracteres</p>}
         <input
+        required
           type="email"
           placeholder="Correo electrónico"
           onChange={handleChangeEmail}
-        />
+        /> {!email.includes('@') && <p className="error-form">Mail no valido</p>}
         <input
+        minLength={6}
+        required
           type="password"
           placeholder="Contraseña"
           onChange={handleChangePassword}
-        />
+        /> {password.length < 6 && <p className="error-form">Contraseña debil (minimo 6)</p>}
         <button>Registrarse</button>
         {
           error && <p className="error-form">Error al registrarse</p>
