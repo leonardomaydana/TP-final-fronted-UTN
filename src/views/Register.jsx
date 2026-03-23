@@ -34,21 +34,20 @@ const  [nombre, setNombre] = useState("")
     const response = register({ nombre, email, password })
 
     if (!response) {
-        console.log("error")
       setError(true)
       return
     }
 
     handleUser({ nombre, email, password })
-        console.log("no error")
     navigate("/")
   }
 
   return (
-    <section>
-      <h2 className="title-login">Crear usuario</h2>
-      <form onSubmit={handleSubmit}>
+    <section className="register-page">
+      <h2 className="register-title">Crear usuario</h2>
+      <form className="register-form" onSubmit={handleSubmit}>
        <input
+       className="register-input"
        minLength={3}
        required
           type="text"
@@ -56,24 +55,28 @@ const  [nombre, setNombre] = useState("")
           onChange={handleChangeNombre}
         /> {nombre.length < 3 && <p className="error-form">Minimo 3 caracteres</p>}
         <input
+        className="register-input"
         required
           type="email"
           placeholder="Correo electrónico"
           onChange={handleChangeEmail}
         /> {!email.includes('@') && <p className="error-form">Mail no valido</p>}
         <input
+        className="register-input"
         minLength={6}
         required
           type="password"
           placeholder="Contraseña"
           onChange={handleChangePassword}
         /> {password.length < 6 && <p className="error-form">Contraseña debil (minimo 6)</p>}
-        <button>Registrarse</button>
+        <button className="register-button">Registrarse</button>
         {
           error && <p className="error-form">Error al registrarse</p>
         }
       </form>
         <p className="text-register">¿Ya tenés cuenta? <span onClick={handlpage} className="link-register">Inicia sesión</span></p>
+
+        <a className="about-link" href="/about">Acerca de</a>
     </section>
   )
 }

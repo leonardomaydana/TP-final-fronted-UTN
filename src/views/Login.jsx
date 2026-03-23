@@ -38,25 +38,43 @@ const Login = () => {
   }
 
   return (
-    <section>
-      <h2 className="title-login">Bienvenido, inicia sesión</h2>
-      <form onSubmit={handleSubmit}>
+    <section className="login-container">
+      <div className="login-box">
+      <h2 className="login-title">Bienvenido</h2>
+      <p className="login-subtitle">Inicia sesión para continuar</p>
+
+      <form className="login-form" onSubmit={handleSubmit}>
+        <div className="input-group">
         <input
           type="email"
           placeholder="Correo electrónico"
           onChange={handleChangeEmail}
+          className="login-input"
+          required
         />
+        </div>
+        <div className="input-group">
         <input
           type="password"
           placeholder="Contraseña"
           onChange={handleChangePassword}
+          className="login-input"
+          required
         />
-        <button>Ingresar</button>
+        </div>
+
+        <button type="submit" className="btn-primary">Ingresar</button>
         {
           error && <p className="error-form">Error al ingresar</p>
         }
       </form>
-      <p className="text-register">¿No tenés cuenta? <span onClick={handlepage} className="link-register">Registrate</span></p>
+
+      <div className="login-footer">
+      <p>¿No tenés cuenta? </p> 
+      <button onClick={handlepage} className="btn-secondary">Registrate</button>
+      <a className="about-link" href="Acerca">Acerca de la app</a>
+      </div>
+      </div>
     </section>
   )
 }
