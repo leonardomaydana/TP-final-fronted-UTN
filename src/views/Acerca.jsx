@@ -31,8 +31,8 @@ const Acerca = () => {
           El diseño es simple y funcional, priorizando la lógica de la aplicación. Como mejora futura, se podría implementar una base de datos real y autenticación más segura.
       </p>
 
-      <a className="about-link" href="/">
-        Volver aL LOGIN
+      <a className="about-link" href="/Login">
+        Volver al LOGIN
       </a>
     </div>
   )

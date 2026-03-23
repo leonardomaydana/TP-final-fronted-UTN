@@ -12,7 +12,7 @@ const  [nombre, setNombre] = useState("")
 
   const navigate = useNavigate()
 
-  const handlpage = () => {
+  const handlepage = () => {
     navigate("/login")
   }
 
@@ -69,14 +69,18 @@ const  [nombre, setNombre] = useState("")
           placeholder="Contraseña"
           onChange={handleChangePassword}
         /> {password.length < 6 && <p className="error-form">Contraseña debil (minimo 6)</p>}
+
         <button className="register-button">Registrarse</button>
         {
           error && <p className="error-form">Error al registrarse</p>
         }
       </form>
-        <p className="text-register">¿Ya tenés cuenta? <span onClick={handlpage} className="link-register">Inicia sesión</span></p>
 
-        <a className="about-link" href="/about">Acerca de</a>
+       <button className="login-button" onClick={handlepage}>
+        Login
+      </button>
+
+        <a className="about-link" href="/Acerca">Acerca</a>
     </section>
   )
 }

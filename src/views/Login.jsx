@@ -72,7 +72,7 @@ const Login = () => {
       <div className="login-footer">
       <p>¿No tenés cuenta? </p> 
       <button onClick={handlepage} className="btn-secondary">Registrate</button>
-      <a className="about-link" href="Acerca">Acerca de la app</a>
+      <a className="about-link" href="/Acerca">Acerca de la app</a>
       </div>
       </div>
     </section>
