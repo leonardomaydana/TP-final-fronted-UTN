@@ -112,7 +112,7 @@ section {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: linear-gradient(90deg, #0f8b6a 0%, #138f75 100%);
+  background: linear-gradient(90deg, #1c95a3 0%, #138f75 100%);
   color: white;
   border-bottom: 1px solid rgba(255, 255, 255, 0.15);
 }
@@ -121,7 +121,7 @@ section {
   padding: 9px 16px;
   border-radius: 10px;
   border: none;
-  background-color: #e74c3c;
+  background-color: #a93022;
   color: white;
   cursor: pointer;
   font-weight: 600;
